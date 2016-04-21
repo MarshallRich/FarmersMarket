@@ -10,7 +10,6 @@
           <li><span>quantity: </span>{{thing.quantityAvailable}} lb</li>
           <li><span>cost: </span>$ {{thing.price}}</li>
             <a href="/#/farmers-profile/{{thing.user.companyName}}"><li>{{thing.user.companyName}}</li></a>
-          <!-- <li>{{thing.userType}}</li> -->
           <form class="order-form" ng-submit="createOrder(thing, thing.id)">
             <li>
               <input class="form-control" type="text" placeholder="Enter Quantity" name="" ng-model="thing.quantityOrdered">

@@ -1,7 +1,7 @@
 <div class="farm-wrap">
   <div class="for-sale col-xs-12 col-sm-3">
     <div class="farm-wrap-inner">
-      <h4>Goods For Sale</h4>
+      <h3>Goods For Sale</h3>
         <ul>
           <form class="signin-form" ng-submit="createInventory(list)">
             <select ng-options="category.categoryName for category in categories" ng-model="list.category" placeholder="something">
@@ -17,7 +17,7 @@
   </div>
   <div class="col-xs-12 col-xs-9">
     <div class="goods-available col-xs-12">
-      <h4>Goods Available</h4>
+      <h3>Goods Available</h3>
       <div ng-repeat="product in myProducts track by $index" class="col-xs-6 product-wrap">
         <div class="product-wrap-inner">
           <ul>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="product-orders col-xs-12">
-      <h4>Product Orders</h4>
+      <h3>Product Orders</h3>
         <div ng-repeat="thing in pendingOrders track by $index" class="col-xs-6 product-wrap">
           <div class="product-wrap-inner">
             <ul>
@@ -46,10 +46,14 @@
     </div>
 
     <div class="approved-orders col-xs-12">
-      <h4> Approved Orders </h4>
-      <ul ng-repeat="approved in approvedOrders track by $index">
-        <li>{{approved.category}} , {{approved.name}} , {{approved.buyer.userName}} ,  $ {{approved.price}} , {{approved.quantityOrdered}} lbs</li>
-      </ul>
+      <h3> Approved Orders </h3>
+        <div ng-repeat="approved in approvedOrders track by $index" class="col-xs-6 product-wrap">
+          <div class="product-wrap-inner">
+            <ul>
+              <li>{{approved.category}} , {{approved.name}} , {{approved.buyer.userName}} ,  $ {{approved.price}} , {{approved.quantityOrdered}} lbs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
